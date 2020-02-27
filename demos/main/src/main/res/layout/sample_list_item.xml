@@ -29,10 +29,11 @@
       android:minHeight="?android:attr/listPreferredItemHeightSmall"
       android:textAppearance="?android:attr/textAppearanceListItemSmall"/>
 
-  <ImageButton android:id="@+id/download_button"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:contentDescription="@string/exo_download_description"
-      android:background="@android:color/transparent"/>
+    <ImageButton android:id="@+id/download_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/exo_download_description"
+        android:background="@android:color/transparent"
+        android:visibility="gone"/>
 
-</LinearLayout>
+  </LinearLayout>
