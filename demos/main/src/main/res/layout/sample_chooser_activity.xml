@@ -29,7 +29,7 @@
     android:id="@+id/imageView1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:src="@drawable/cacao_icon"
+    android:src="@drawable/cacao2_50"
     android:gravity="center"
     android:layout_weight="3"/>
 
