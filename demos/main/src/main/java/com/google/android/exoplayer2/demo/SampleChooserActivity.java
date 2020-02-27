@@ -78,6 +78,7 @@ public class SampleChooserActivity extends AppCompatActivity
     sampleAdapter = new SampleAdapter();
     ExpandableListView sampleListView = findViewById(R.id.sample_list);
     sampleListView.setAdapter(sampleAdapter);
+
     sampleListView.setOnChildClickListener(this);
 
     TextView textView1 = findViewById(R.id.textView1);
@@ -494,6 +495,9 @@ public class SampleChooserActivity extends AppCompatActivity
                 .inflate(android.R.layout.simple_expandable_list_item_1, parent, false);
       }
       ((TextView) view).setText(getGroup(groupPosition).title);
+      // Adam added this to get the menu to stay open
+      ExpandableListView sampleListView = (ExpandableListView) parent;
+      sampleListView.expandGroup(groupPosition);
       return view;
     }
 
