@@ -79,8 +79,9 @@ public class SampleChooserActivity extends AppCompatActivity
     ExpandableListView sampleListView = findViewById(R.id.sample_list);
     sampleListView.setAdapter(sampleAdapter);
     sampleListView.setOnChildClickListener(this);
+
     TextView textView1 = findViewById(R.id.textView1);
-    textView1.setTextColor(Color.BLUE);
+    textView1.setTextColor(Color.parseColor("#00802b"));
     textView1.bringToFront();
 
     Intent intent = getIntent();
