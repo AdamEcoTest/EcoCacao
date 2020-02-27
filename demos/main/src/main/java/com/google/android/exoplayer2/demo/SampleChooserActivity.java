@@ -18,6 +18,7 @@ package com.google.android.exoplayer2.demo;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.AssetManager;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -78,6 +79,9 @@ public class SampleChooserActivity extends AppCompatActivity
     ExpandableListView sampleListView = findViewById(R.id.sample_list);
     sampleListView.setAdapter(sampleAdapter);
     sampleListView.setOnChildClickListener(this);
+    TextView textView1 = findViewById(R.id.textView1);
+    textView1.setTextColor(Color.BLUE);
+    textView1.bringToFront();
 
     Intent intent = getIntent();
     String dataUri = intent.getDataString();
