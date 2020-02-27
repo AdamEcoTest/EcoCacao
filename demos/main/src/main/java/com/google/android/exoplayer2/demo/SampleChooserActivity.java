@@ -118,7 +118,7 @@ public class SampleChooserActivity extends AppCompatActivity
       DownloadService.startForeground(this, DemoDownloadService.class);
     }
   }
-
+/*
   @Override
   public boolean onCreateOptionsMenu(Menu menu) {
     MenuInflater inflater = getMenuInflater();
@@ -132,7 +132,7 @@ public class SampleChooserActivity extends AppCompatActivity
     }
     return true;
   }
-
+*/
   @Override
   public boolean onOptionsItemSelected(MenuItem item) {
     item.setChecked(!item.isChecked());
