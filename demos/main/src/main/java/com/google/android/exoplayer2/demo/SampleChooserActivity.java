@@ -500,9 +500,11 @@ public class SampleChooserActivity extends AppCompatActivity
                 .inflate(android.R.layout.simple_expandable_list_item_1, parent, false);
       }
       ((TextView) view).setText(getGroup(groupPosition).title);
+      ((TextView) view).setTextColor(Color.parseColor("#e6b200"));
       // Adam added this to get the menu to stay open
       ExpandableListView sampleListView = (ExpandableListView) parent;
       sampleListView.expandGroup(groupPosition);
+
       return view;
     }
 
