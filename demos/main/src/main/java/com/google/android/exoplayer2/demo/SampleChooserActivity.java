@@ -23,8 +23,6 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.JsonReader;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -57,6 +55,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
 
 /** An activity for selecting from a list of media samples. */
 public class SampleChooserActivity extends AppCompatActivity
@@ -81,8 +82,12 @@ public class SampleChooserActivity extends AppCompatActivity
 
     sampleListView.setOnChildClickListener(this);
 
-    TextView textView1 = findViewById(R.id.textView1);
-    textView1.setTextColor(Color.parseColor("#00802b"));
+    // Create auto-year-update for copyright
+    String date_n = new SimpleDateFormat("yyyy", Locale.getDefault()).format(new Date());
+
+    TextView textView1 = findViewById(R.id.copyright);
+    textView1.setText(date_n + " " + getString(R.string.copyright));
+    textView1.setTextColor(Color.parseColor("#e6b200"));
     textView1.bringToFront();
 
     Intent intent = getIntent();
