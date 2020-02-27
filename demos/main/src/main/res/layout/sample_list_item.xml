@@ -36,4 +36,4 @@
         android:background="@android:color/transparent"
         android:visibility="gone"/>
 
-  </LinearLayout>
+</LinearLayout>
