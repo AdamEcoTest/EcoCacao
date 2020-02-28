@@ -25,6 +25,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.JsonReader;
 import android.util.TypedValue;
+import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -32,10 +33,13 @@ import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.ExpandableListView;
 import android.widget.ExpandableListView.OnChildClickListener;
+import android.widget.FrameLayout;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.exoplayer2.ParserException;
 import com.google.android.exoplayer2.RenderersFactory;
@@ -84,13 +88,27 @@ public class SampleChooserActivity extends AppCompatActivity
 
     sampleListView.setOnChildClickListener(this);
 
-    // Create auto-year-update for copyright
+    // Adam Create auto-year-update for copyright
     String date_n = new SimpleDateFormat("yyyy", Locale.getDefault()).format(new Date());
-
     TextView textView1 = findViewById(R.id.copyright);
     textView1.setText(date_n + " " + getString(R.string.copyright));
     textView1.setTextColor(Color.parseColor("#e6b200"));
     textView1.bringToFront();
+
+    // add icon to Action Bar
+    /*
+    ActionBar actionBar = getSupportActionBar();
+    getSupportActionBar().setDisplayShowHomeEnabled(true);
+    getSupportActionBar().setLogo(R.mipmap.eco_cacao2);
+    getSupportActionBar().setDisplayUseLogoEnabled(true);
+*/
+
+    // Adds icon to the right of the Action Bar
+    ActionBar actionBar = getSupportActionBar();
+    actionBar.setDisplayShowCustomEnabled(true);
+    LayoutInflater inflator = (LayoutInflater) this .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+    View v = inflator.inflate(R.layout.action_bar_icon, null);
+    actionBar.setCustomView(v);
 
     Intent intent = getIntent();
     String dataUri = intent.getDataString();
