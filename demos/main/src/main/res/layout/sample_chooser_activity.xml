@@ -23,7 +23,8 @@
     android:id="@+id/sample_list"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_weight="2"/>
+    android:layout_weight="2"
+    android:groupIndicator="@null"/>
 
   <ImageView
     android:id="@+id/imageView1"
