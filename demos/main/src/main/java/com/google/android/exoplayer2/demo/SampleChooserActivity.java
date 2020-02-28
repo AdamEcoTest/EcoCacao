@@ -505,7 +505,7 @@ public class SampleChooserActivity extends AppCompatActivity
       ((TextView) view).setTextColor(Color.parseColor("#e6b200"));
       ((TextView) view).setTypeface(null, Typeface.BOLD);
       ((TextView) view).setTextSize(25);
-      ((TextView) view).setPadding(25, 0, 0, 0);
+      ((TextView) view).setPadding(28, 0, 0, 0);
       // Adam added this to get the menu to stay open
       ExpandableListView sampleListView = (ExpandableListView) parent;
       sampleListView.expandGroup(groupPosition);
