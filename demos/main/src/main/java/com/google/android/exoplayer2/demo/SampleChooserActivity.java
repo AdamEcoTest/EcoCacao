@@ -491,7 +491,9 @@ public class SampleChooserActivity extends AppCompatActivity
         downloadButton.setOnClickListener(this);
         downloadButton.setFocusable(false);
       }
+
       initializeChildView(view, getChild(groupPosition, childPosition));
+
       return view;
     }
 
@@ -523,7 +525,7 @@ public class SampleChooserActivity extends AppCompatActivity
       ((TextView) view).setTextColor(Color.parseColor("#e6b200"));
       ((TextView) view).setTypeface(null, Typeface.BOLD);
       ((TextView) view).setTextSize(25);
-      ((TextView) view).setPadding(30, 0, 0, 0);
+      ((TextView) view).setPadding(32, 0, 0, 0);
       // Adam added this to get the menu to stay open
       ExpandableListView sampleListView = (ExpandableListView) parent;
       sampleListView.expandGroup(groupPosition);
