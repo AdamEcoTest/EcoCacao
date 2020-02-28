@@ -19,10 +19,12 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.res.AssetManager;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.JsonReader;
+import android.util.TypedValue;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -501,6 +503,8 @@ public class SampleChooserActivity extends AppCompatActivity
       }
       ((TextView) view).setText(getGroup(groupPosition).title);
       ((TextView) view).setTextColor(Color.parseColor("#e6b200"));
+      ((TextView) view).setTypeface(null, Typeface.BOLD);
+      ((TextView) view).setTextSize(25);
       // Adam added this to get the menu to stay open
       ExpandableListView sampleListView = (ExpandableListView) parent;
       sampleListView.expandGroup(groupPosition);
