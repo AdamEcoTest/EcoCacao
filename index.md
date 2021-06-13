@@ -2,7 +2,7 @@
 
 You can use the [editor on GitHub](https://github.com/adamdewey/EcoCacao/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
-{% include callout.html content="This is my callout. It has a border on the left whose color you define by passing a type parameter. I typically use this style of callout when I have more information that I want to share, often spanning multiple paragraphs. " type="primary" %} 
+
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
