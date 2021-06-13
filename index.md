@@ -5,6 +5,12 @@ You can use the [editor on GitHub](https://github.com/adamdewey/EcoCacao/edit/gh
 > This is a callout
 > This is the 2nd line
 
+{% note %}
+
+**Note:** Owners and administrators can add outside collaborators to a repository.
+
+{% endnote %}
+
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
 ### Markdown
